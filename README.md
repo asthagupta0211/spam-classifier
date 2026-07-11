@@ -1,5 +1,7 @@
 # Spam Classifier
 
+#URL: https://spam-classifier-r58h.onrender.com/
+
 A machine-learning web app that classifies SMS/email messages as **Spam** or **Not Spam**.
 It uses a TF-IDF vectorizer + trained scikit-learn model, exposed through two interfaces:
 
