@@ -1,4 +1,4 @@
-﻿# Spam Classifier
+# Spam Classifier
 
 A machine-learning web app that classifies SMS/email messages as **Spam** or **Not Spam**.
 It uses a TF-IDF vectorizer + trained scikit-learn model, exposed through two interfaces:
@@ -24,7 +24,7 @@ project/
 
 ## Training & Results
 
-> Auto-generated from [spam_classifier_training.ipynb](spam_classifier_training.ipynb) — shows the dataset, EDA, preprocessing and model comparison.
+> Auto-generated from [`spam_classifier_training.ipynb`](spam_classifier_training.ipynb) — shows the dataset, EDA, preprocessing and model comparison.
 
 (59241, 2)
 
@@ -224,14 +224,12 @@ project/
 
 
 
-    np.int64(4278)
 
 
 
 
 
 
-    np.int64(0)
 
 
 
@@ -317,18 +315,11 @@ project/
     
 
 
-    [nltk_data] Downloading package punkt_tab to
-    [nltk_data]     C:\Users\ASTHA\AppData\Roaming\nltk_data...
-    [nltk_data]   Package punkt_tab is already up-to-date!
-    [nltk_data] Downloading package stopwords to
-    [nltk_data]     C:\Users\ASTHA\AppData\Roaming\nltk_data...
-    [nltk_data]   Package stopwords is already up-to-date!
     
 
 
 
 
-    True
 
 
 
@@ -785,7 +776,6 @@ project/
 
 
 
-    <Axes: xlabel='num_characters', ylabel='Count'>
 
 
 
@@ -798,7 +788,6 @@ project/
 
 
 
-    <Axes: xlabel='num_words', ylabel='Count'>
 
 
 
@@ -811,7 +800,6 @@ project/
 
 
 
-    <Axes: xlabel='num_sentences', ylabel='Count'>
 
 
 
@@ -824,7 +812,6 @@ project/
 
 
 
-    <seaborn.axisgrid.PairGrid at 0x264b956e510>
 
 
 
@@ -837,7 +824,6 @@ project/
 
 
 
-    <Axes: >
 
 
 
@@ -955,7 +941,6 @@ project/
 
 
 
-    <matplotlib.image.AxesImage at 0x264bc19da90>
 
 
 
@@ -968,7 +953,6 @@ project/
 
 
 
-    <matplotlib.image.AxesImage at 0x264bc319a90>
 
 
 
@@ -1060,10 +1044,6 @@ you never actually got to see which algorithm won — it's live now.
     F1 - 0.592969776609724
     
 
-    C:\Users\ASTHA\AppData\Local\Programs\Python\Python314\Lib\site-packages\sklearn\linear_model\_logistic.py:1403: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.
-      warnings.warn(
-    C:\Users\ASTHA\AppData\Local\Programs\Python\Python314\Lib\site-packages\sklearn\linear_model\_logistic.py:1429: UserWarning: Inconsistent values: penalty=l1 with l1_ratio=0.0. penalty is deprecated. Please use l1_ratio only.
-      warnings.warn(
     
 
     For LR
@@ -1265,4 +1245,3 @@ streamlit run hf.py               # Streamlit -> http://localhost:8501
 ## Model artifacts
 `model1.pkl` and `vectorizer1.pkl` are required at runtime and are committed to the repo
 so the deployed app works without retraining.
-
