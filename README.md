@@ -209,36 +209,9 @@ project/
   </tbody>
 </table>
 </div>
+Dataset shape: (54963, 2)
 
-
-
-
-
-
-    target    0
-    text      0
-    dtype: int64
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    (54963, 2)
-
-
+### EDA
 
 ### EDA
 
@@ -311,7 +284,7 @@ project/
 
 
     
-![png](spam_classifier_training_files/spam_classifier_training_20_0.png)
+![Ham vs spam distribution](spam_classifier_training_files/ham_vs_spam_pie.png)
     
 
 
@@ -781,7 +754,7 @@ project/
 
 
     
-![png](spam_classifier_training_files/spam_classifier_training_32_1.png)
+![Character count distribution by target](spam_classifier_training_files/num_characters_distribution.png)
     
 
 
@@ -793,7 +766,7 @@ project/
 
 
     
-![png](spam_classifier_training_files/spam_classifier_training_33_1.png)
+![Word count distribution by target](spam_classifier_training_files/num_words_distribution.png)
     
 
 
@@ -805,7 +778,7 @@ project/
 
 
     
-![png](spam_classifier_training_files/spam_classifier_training_34_1.png)
+![Sentence count distribution by target](spam_classifier_training_files/num_sentences_distribution.png)
     
 
 
@@ -817,7 +790,7 @@ project/
 
 
     
-![png](spam_classifier_training_files/spam_classifier_training_35_1.png)
+![Pairplot of text features by target](spam_classifier_training_files/pairplot.png)
     
 
 
@@ -829,7 +802,7 @@ project/
 
 
     
-![png](spam_classifier_training_files/spam_classifier_training_36_1.png)
+![Correlation heatmap of text features](spam_classifier_training_files/feature_correlation_heatmap.png)
     
 
 
@@ -946,7 +919,7 @@ project/
 
 
     
-![png](spam_classifier_training_files/spam_classifier_training_48_1.png)
+![Spam word cloud](spam_classifier_training_files/spam_wordcloud.png)
     
 
 
@@ -958,7 +931,7 @@ project/
 
 
     
-![png](spam_classifier_training_files/spam_classifier_training_50_1.png)
+![Ham word cloud](spam_classifier_training_files/ham_wordcloud.png)
     
 
 
@@ -971,7 +944,7 @@ project/
 
 
     
-![png](spam_classifier_training_files/spam_classifier_training_53_0.png)
+![Top spam words](spam_classifier_training_files/top_spam_words.png)
     
 
 
@@ -984,7 +957,7 @@ project/
 
 
     
-![png](spam_classifier_training_files/spam_classifier_training_56_0.png)
+![Top ham words](spam_classifier_training_files/top_ham_words.png)
     
 
 
@@ -1189,7 +1162,7 @@ you never actually got to see which algorithm won — it's live now.
 
 
     
-![png](spam_classifier_training_files/spam_classifier_training_73_0.png)
+![Model performance comparison](spam_classifier_training_files/model_performance_comparison.png)
     
 
 
