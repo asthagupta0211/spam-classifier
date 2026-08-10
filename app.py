@@ -57,18 +57,30 @@ def predict():
         return jsonify({'error': 'Could not extract any usable text from that message.'}), 400
 
     vector_input = tfidf.transform([transformed])
-    result = int(model.predict(vector_input)[0])
-
-    response = {'result': 'Spam' if result == 1 else 'Not Spam'}
-
-    # Surface a confidence score when the underlying model supports it
+    
+    # Check if model supports predict_proba (the VotingClassifier with voting='soft' does)
     if hasattr(model, 'predict_proba'):
         proba = model.predict_proba(vector_input)[0]
-        response['confidence'] = float(proba[result])
-    elif hasattr(model, 'decision_function'):
-        import math
-        score = float(model.decision_function(vector_input)[0])
-        response['confidence'] = 1 / (1 + math.exp(-abs(score)))  # squashed pseudo-confidence
+        spam_prob = proba[1]
+        
+        # CUSTOM THRESHOLD: Increase this value (e.g., 0.7 to 0.85) to reduce false positives
+        # A higher threshold means the model must be very confident it's spam
+        threshold = 0.75
+        
+        result = 1 if spam_prob >= threshold else 0
+        response = {
+            'result': 'Spam' if result == 1 else 'Not Spam',
+            'confidence': float(proba[result])
+        }
+    else:
+        # Fallback if the model doesn't support probability
+        result = int(model.predict(vector_input)[0])
+        response = {'result': 'Spam' if result == 1 else 'Not Spam'}
+        
+        if hasattr(model, 'decision_function'):
+            import math
+            score = float(model.decision_function(vector_input)[0])
+            response['confidence'] = 1 / (1 + math.exp(-abs(score)))
 
     return jsonify(response)
 
